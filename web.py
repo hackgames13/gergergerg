@@ -95,4 +95,5 @@ def get_info():
         return Response("not found", status=404)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=8080)
+
