@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw
 app = Flask(__name__)
 
 @app.route('/')
-def get_icon():
+def index():
     return Response("GG Bro")
 
 @app.route('/api/widget')
@@ -100,5 +100,6 @@ def get_info():
 
 if __name__ == "__main__":
     app.run(debug=False,port=8080)
+
 
 
