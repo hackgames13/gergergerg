@@ -6,6 +6,10 @@ from PIL import Image, ImageDraw
 
 app = Flask(__name__)
 
+@app.route('/')
+def get_icon():
+    return Response("GG Bro")
+
 @app.route('/api/widget')
 def get_icon():
     img_url = f"https://api.mcstatus.io/v2/widget/java/{os.environ['url']}"
@@ -95,5 +99,6 @@ def get_info():
         return Response("not found", status=404)
 
 if __name__ == "__main__":
-    app.run(port=8080)
+    app.run(debug=False,port=8080)
+
 
